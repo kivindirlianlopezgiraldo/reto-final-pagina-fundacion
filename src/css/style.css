@@ -375,3 +375,30 @@ nav ul li ul li a:hover{
     font-size: 15px;
     
 }
+
+/* mq */
+@media (max-width: 460px) { 
+
+    .header__superior{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .datos-fundacion {
+        display: block;
+        width: 100%;
+    }
+
+    .cajas{
+        flex-direction: column;
+    }
+    .cajas-organizaciones{
+        height: 200px;
+        width:100%
+    }
+
+    .cajas-organizaciones:hover {
+        width: 100%;
+        height: 200px;
+    }
+}
