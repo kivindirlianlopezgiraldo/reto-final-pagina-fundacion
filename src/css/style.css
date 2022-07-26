@@ -1,39 +1,56 @@
 /* generales */
 html{box-sizing: border-box; font-size: 62.5%;}
 *, *::before, *::after{box-sizing: inherit; margin: 0; padding: 0;}
-body{font-size: 16px;  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   background-color:var(--coloruno);
-}
+body{font-size: 16px; font-family: 'Merriweather', serif; 
+    background-color: #D9AFD9;
+    background-image: -webkit-linear-gradient(0deg, #D9AFD9 0%, #97D9E1 23%, #ffffff 100%);
+    background-image: -moz-linear-gradient(0deg, #D9AFD9 0%, #97D9E1 23%, #ffffff 100%);
+    background-image: -o-linear-gradient(0deg, #D9AFD9 0%, #97D9E1 23%, #ffffff 100%);
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 23%, #ffffff 100%);
+
+    }
 
 *{
     text-decoration: none;
 }
 
 header{
-    width: 100%;
-    position: fixed;
-    top: 0;
+    width: 100%; 
+     position: fixed; 
+     top: 0;
     left: 0;
+    background-image: url(../galeria/imagenes/fondo1.jpg);
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+
+
 
 /* header superior */
 
+
+
 .header__superior{
     max-width: 70%;
-    margin: auto;
+    margin: 5px auto 20px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    
 }
 
 .logo img{
     width: 50px;
 }
 
-.search input{
-    width: 300px;
-    padding: 10px;
+.datos-fundacion {
+    display: flex;
 }
+
+.datos-fundacion p{
+    margin: 10px;
+}
+
 
 /* BARRA MENU */
 
@@ -244,4 +261,117 @@ nav ul li ul li a:hover{
         visibility: visible;
         opacity: 1;
     }
+}
+
+/* fondos */
+.fondos{
+    margin-top: 167px;
+    width: 100%;
+    height: 350px;
+    
+}
+
+.slider{
+    margin: 20px auto;
+    width: 70%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slider ul{
+    display: flex;
+    animation: cambio 20s infinite alternate linear;
+    width: 400%;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider img{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+    
+}
+
+/* organizaciones */
+.organizaciones{
+    width: 70%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+
+
+.cajas{
+    margin: 20px 0;
+    display: flex;
+}
+
+.cajas-organizaciones{
+    width: 30%;
+    height: 110px;
+    text-align: center;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border-radius: 10px;
+     transition: all 400ms ease; 
+}
+
+.caja-1{
+    background-image: url(../galeria/imagenes/netflix.png);
+    
+}
+
+.caja-2{
+    background-image: url(../galeria/imagenes/apple.jpg);
+}
+.caja-3{
+    background-image: url(../galeria/imagenes/nasa.png);
+}
+.caja-4{
+    background-image: url(../galeria/imagenes/area51.jpg);
+}
+
+ .descrpcion{
+   display: none;
+}
+
+.cajas-organizaciones:hover{
+    width: 40%;
+    height: 160px;
+  
+}
+
+.cajas-organizaciones:hover .descrpcion{
+    background-color: rgb(128 128 128 / 70%);
+    color: white;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.descrpcion p{
+    font-size: 15px;
+    
 }
