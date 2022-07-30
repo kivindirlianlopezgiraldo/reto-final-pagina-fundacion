@@ -376,21 +376,28 @@ nav ul li ul li a:hover{
     
 }
 
-/* mq */
-@media (max-width: 460px) { 
+ 
+@media (max-width: 720px) { 
 
     .header__superior{
         display: block;
         margin: 0 auto;
     }
 
+    .logo {
+        text-align: center;
+    }
+
     .datos-fundacion {
-        display: block;
+        display: none;
+    }
+
+    .slider{
         width: 100%;
     }
 
     .cajas{
-        flex-direction: column;
+        display: block;
     }
     .cajas-organizaciones{
         height: 200px;
@@ -401,4 +408,6 @@ nav ul li ul li a:hover{
         width: 100%;
         height: 200px;
     }
-}
+
+    
+} 
